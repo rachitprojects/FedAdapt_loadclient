@@ -43,7 +43,7 @@ def get_local_dataloader(CLIENT_IDEX, cpu_count):
 	transforms.Normalize((0.4914, 0.4822, 0.4465), (0.2023, 0.1994, 0.2010)),
 ])
 	trainset = torchvision.datasets.CIFAR10(
-		root=dataset_path, train=True, download=False, transform=transform_train)
+		root=dataset_path, train=True, download=True, transform=transform_train)
 	subset = Subset(trainset, part_tr)
 	trainloader = DataLoader(
 		subset, batch_size=B, shuffle=True, num_workers=cpu_count)

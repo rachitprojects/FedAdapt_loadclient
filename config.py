@@ -1,17 +1,17 @@
 import sys
 
 # Network configration
-SERVER_ADDR= '192.168.0.10'
+SERVER_ADDR= '10.10.0.4'
 SERVER_PORT = 51000
 
-K = 5 # Number of devices
-G = 3 # Number of groups
+K = 1 # Number of devices
+G = 1 # Number of groups
 
 # Unique clients order
 HOST2IP = {'pi41':'192.168.0.14' , 'pi42':'192.168.0.15', 'jetson-desktop':'192.168.0.25' , 'pi31':'192.168.0.36', 'pi32':'192.168.0.29'}
 CLIENTS_CONFIG= {'192.168.0.14':0, '192.168.0.15':1, '192.168.0.25':2, '192.168.0.36':3, '192.168.0.29':4}
-CLIENTS_LIST= ['192.168.0.14', '192.168.0.15', '192.168.0.25', '192.168.0.36', '192.168.0.29'] 
-
+#CLIENTS_LIST= ['192.168.0.14', '192.168.0.15', '192.168.0.25', '192.168.0.36', '192.168.0.29'] 
+CLIENTS_LIST = ['10.0.2.15']
 # Dataset configration
 dataset_name = 'CIFAR10'
 home = sys.path[0].split('FedAdapt')[0] + 'FedAdapt'

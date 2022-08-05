@@ -19,8 +19,10 @@ parser=argparse.ArgumentParser()
 parser.add_argument('--offload', help='FedAdapt or classic FL mode', type= utils.str2bool, default= False)
 args=parser.parse_args()
 
-ip_address = config.HOST2IP[socket.gethostname()]
-index = config.CLIENTS_CONFIG[ip_address]
+#ip_address = config.HOST2IP[socket.gethostname()]
+#index = config.CLIENTS_CONFIG[ip_address]
+ip_address = '172.16.222.102'
+index = 0
 datalen = config.N / config.K
 split_layer = config.split_layer[index]
 LR = config.LR
