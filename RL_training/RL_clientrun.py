@@ -19,8 +19,10 @@ if config.random:
 	logger.info('Random seed: {}'.format(config.random_seed))
 
 first = True
-ip_address = config.HOST2IP[socket.gethostname()]
-index = config.CLIENTS_CONFIG[ip_address]
+#ip_address = config.HOST2IP[socket.gethostname()]
+ip_address = '192.168.145.71'
+#index = config.CLIENTS_CONFIG[ip_address]
+index = 0
 datalen = config.N / config.K
 split_layer = config.split_layer[index]
 
@@ -30,7 +32,7 @@ trainloader, classes= utils.get_local_dataloader(index, cpu_count)
 
 logger.info('==> Preparing RL_Client..')
 rl_client = RL_Client(index, ip_address, config.SERVER_ADDR, config.SERVER_PORT, datalen, config.model_name, split_layer, config.model_cfg)
-
+print("here")
 while True:
 	reset_flag = rl_client.recv_msg(rl_client.sock, 'RESET_FLAG')[1]
 	if reset_flag:

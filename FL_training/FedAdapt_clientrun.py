@@ -21,7 +21,7 @@ args=parser.parse_args()
 
 #ip_address = config.HOST2IP[socket.gethostname()]
 #index = config.CLIENTS_CONFIG[ip_address]
-ip_address = '172.16.222.102'
+ip_address = '192.168.145.71'
 index = 0
 datalen = config.N / config.K
 split_layer = config.split_layer[index]

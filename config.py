@@ -1,10 +1,10 @@
 import sys
 
 # Network configration
-SERVER_ADDR= '10.10.0.4'
+SERVER_ADDR= '10.10.0.3'
 SERVER_PORT = 51000
 
-K = 1 # Number of devices
+K = 2 # Number of devices
 G = 1 # Number of groups
 
 # Unique clients order
@@ -55,7 +55,7 @@ rl_gamma = 0.9             # discount factor
 rl_b = 100				   # Batchsize
 rl_lr = 0.0003             # parameters for Adam optimizer
 rl_betas = (0.9, 0.999)
-iteration = {'192.168.0.14' : 5, '192.168.0.15' : 5, '192.168.0.25': 50, '192.168.0.36': 5, '192.168.0.29': 5}  # infer times for each device
+iteration = {'192.168.0.14' : 5, '192.168.0.15' : 5, '192.168.0.25': 50, '192.168.0.36': 5, '192.168.0.29': 5, '192.168.145.71':6}  # infer times for each device
 
 random = True
 random_seed = 0
